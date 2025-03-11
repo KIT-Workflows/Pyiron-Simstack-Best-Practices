@@ -20,6 +20,9 @@
 ### Input generator
 
 ```python
+import numpy as np
+import os
+
 def generate_input(x, y, path):
     data_file = os.path.join(path, 'xy.dat')
     np.savetxt(data_file, np.stack((x, y), axis=-1))
